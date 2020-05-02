@@ -1,0 +1,35 @@
+#微服务注册到eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/
+server:
+  port: 9002
+spring:
+  application:
+    name: ihrm-system #指定服务名
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ihrm?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
+  redis:
+    host: localhost
+    port: 6379
+jwt:
+  config:
+    key: saas-ihrm
+    ttl: 3600000
+    #人脸认证
+ai:
+  appId: 18308312
+  apiKey: tO5TMdqbqPya05wYfaFi68lK
+  secretKey: 9awnPPLs2Sr32SfiipGlOpGK9k7Diq8w
+  imageType: BASE64
+  groupId: ihrm
+qr:
+  url: http://localhost:8080/#/facelogin
